@@ -1,0 +1,50 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+
+# Runtime data (generated at runtime, not source)
+data/
+logs/
+reports/
+workspace/
+
+# ChromaDB / vector store
+*.sqlite3
+*.db
+chroma/
+
+# Config (contains personal settings — users create their own)
+config.json
+*.local.json
+
+# Environment
+.env
+.env.*
+*.pem
+*.key
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.sw?
+.DS_Store
+Thumbs.db
+
+# Node (covered by jarvis-ui/.gitignore but belt-and-suspenders)
+node_modules/
+
+# Rust build (covered by src-tauri/.gitignore)
+target/
