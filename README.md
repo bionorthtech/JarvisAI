@@ -1,8 +1,8 @@
 # JARVIS — Local AI Agent
 
-> A fully local, privacy-first AI assistant and coding agent — powered by LM Studio and ChromaDB, zero cloud required.
+> A fully local, privacy-first AI assistant and coding agent — powered by LM Studio 
 
-JARVIS runs entirely on your machine. It combines a **FastAPI backend** with a **Tauri + React desktop app** to give you a persistent coding assistant, an Obsidian-compatible second brain, a homelab warden, and a four-level autonomy system that can pursue its own goals while you sleep. No API keys. No telemetry. No data leaves your hardware.
+JARVIS runs entirely on your machine. It uses LM studio to run the ai models then connects to the jarvis app give you a persistent coding assistant, an Obsidian-compatible second brain, a homelab warden, and a four-level autonomy system that can pursue its own goals while you sleep. No API keys. No telemetry. No data leaves your hardware.
 
 ---
 
