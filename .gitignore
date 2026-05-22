@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.env
+
+# Build artifacts
+build/
+dist/
+*.spec.bak
+
+# Tauri build output
+jarvis-ui/src-tauri/target/
+jarvis-ui/dist/
+jarvis-ui/node_modules/
+
+# Sidecar binary (large — rebuild with pyinstaller)
+jarvis-ui/src-tauri/binaries/
+
+# Runtime data
+logs/
+data/
+config/
+second_brain/
+
+# IDE
+.vscode/
+.idea/
+
+# DNS / hardening rollback snapshots (root-owned, local-only)
+security/dns-rollback-*/
+
+# Personal Claude Code settings (project-local)
+.claude/settings.local.json

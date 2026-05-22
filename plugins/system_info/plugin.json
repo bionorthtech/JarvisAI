@@ -1,0 +1,39 @@
+{
+  "name": "system_info",
+  "version": "1.0.0",
+  "description": "System information — hardware specs, installed apps, storage, and security audit",
+  "author": "JARVIS",
+  "requires_internet": false,
+  "tools": [
+    {
+      "name": "system_hardware",
+      "tier": "SAFE",
+      "description": "Show CPU, GPU, RAM, and OS information.",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "system_storage",
+      "tier": "SAFE",
+      "description": "Show disk usage for all mounted filesystems.",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "sandbox_info",
+      "tier": "SAFE",
+      "description": "Report sandbox capabilities (bwrap, socat availability) and workspace location.",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  ]
+}

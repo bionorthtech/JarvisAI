@@ -1,0 +1,3 @@
+[tool.pytest.ini_options]
+testpaths = ["agent"]
+norecursedirs = ["security", "venv", "node_modules", "dist", "build", "__pycache__", "jarvis-ui", "workspace", "data", "logs", "reports"]

@@ -1,0 +1,69 @@
+{
+  "name": "process_monitor",
+  "version": "1.0.0",
+  "description": "System process monitoring — list, inspect, and stop processes. Also shows CPU/RAM/disk usage.",
+  "author": "JARVIS",
+  "requires_internet": false,
+  "tools": [
+    {
+      "name": "process_list",
+      "tier": "SAFE",
+      "description": "List running processes sorted by CPU usage. Filter by name.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "filter_name": {"type": "string", "description": "Optional: only show processes containing this name", "default": ""},
+          "limit": {"type": "integer", "description": "Max processes to return", "default": 25}
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "process_info",
+      "tier": "SAFE",
+      "description": "Get detailed information about a specific process by PID.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "pid": {"type": "integer", "description": "Process ID"}
+        },
+        "required": ["pid"]
+      }
+    },
+    {
+      "name": "process_stop",
+      "tier": "DANGER",
+      "description": "Stop a process by PID. Sends SIGTERM by default, SIGKILL if force=true.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "pid": {"type": "integer"},
+          "force": {"type": "boolean", "description": "Use SIGKILL instead of SIGTERM", "default": false}
+        },
+        "required": ["pid"]
+      }
+    },
+    {
+      "name": "system_resources",
+      "tier": "SAFE",
+      "description": "Get current CPU, RAM, disk, and GPU usage.",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "network_connections",
+      "tier": "SAFE",
+      "description": "List active network connections. Useful for detecting unexpected outbound connections.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "filter_pid": {"type": "integer", "description": "Optional: only show connections for this PID", "default": 0}
+        },
+        "required": []
+      }
+    }
+  ]
+}

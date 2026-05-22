@@ -1,0 +1,48 @@
+{
+  "name": "docs_ingest",
+  "version": "1.0.0",
+  "description": "Ingest documents (PDF, markdown, text, code) into JARVIS memory for offline RAG search",
+  "author": "JARVIS",
+  "requires_internet": false,
+  "tools": [
+    {
+      "name": "ingest_file",
+      "tier": "SAFE",
+      "description": "Ingest a single file into JARVIS project memory. Supports PDF, markdown, text, and source code files.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {"type": "string", "description": "Absolute or ~ path to the file"},
+          "project": {"type": "string", "description": "JARVIS project namespace to index into", "default": "default"}
+        },
+        "required": ["path"]
+      }
+    },
+    {
+      "name": "ingest_directory",
+      "tier": "SAFE",
+      "description": "Recursively ingest all files of specified types from a directory into JARVIS memory.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {"type": "string", "description": "Directory path to ingest"},
+          "project": {"type": "string", "description": "JARVIS project namespace", "default": "default"},
+          "extensions": {"type": "string", "description": "Comma-separated file extensions to include", "default": ".md,.txt,.py,.js,.ts,.rs,.go"}
+        },
+        "required": ["path"]
+      }
+    },
+    {
+      "name": "memory_stats",
+      "tier": "SAFE",
+      "description": "Show JARVIS memory statistics for a project — how many file chunks and conversation turns are stored.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "project": {"type": "string", "default": "default"}
+        },
+        "required": []
+      }
+    }
+  ]
+}

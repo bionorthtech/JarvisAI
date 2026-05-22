@@ -1,0 +1,29 @@
+{
+  "name": "web_search",
+  "version": "1.0.0",
+  "description": "Search the web via DuckDuckGo (no API key required). DISABLED by default — enable internet_access in config.",
+  "author": "JARVIS",
+  "requires_internet": true,
+  "tools": [
+    {
+      "name": "web_search",
+      "tier": "SAFE",
+      "description": "Search the web for up-to-date information using DuckDuckGo. Returns top results with titles, URLs, and snippets.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Search query"
+          },
+          "max_results": {
+            "type": "integer",
+            "description": "Maximum number of results to return (default 5)",
+            "default": 5
+          }
+        },
+        "required": ["query"]
+      }
+    }
+  ]
+}

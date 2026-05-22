@@ -1,0 +1,28 @@
+# Logs (the `logs` rule matches by name at any depth — but we have a
+# legitimate mode dir at src/modes/logs/ as part of the B2 frontend
+# split, so explicitly re-include it.)
+logs
+!src/modes/logs
+!src/modes/logs/*
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

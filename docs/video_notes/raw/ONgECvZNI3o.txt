@@ -1,0 +1,393 @@
+You need to use NAN right now. It's the most powerful automation
+tool I've ever seen. On top of that, it's open source, local,
+private, and free. It makes Zapier and I-F-T-T-T
+crop the holdup. I'm warning you, NAN is addicting because you can
+automate everything right here from this beautiful gooey. We can start with
+something simple, aggregating your news, YouTube subreddits, hacker News, a
+nice daily digest sent to your inbox. Maybe sprinkle in a little
+bit of AI summarization. Let's get crazier and automate your
+home lab, run commands on a schedule. Create an AI agent that will troubleshoot
+your home lab before you even know there's an issue. You can even talk
+with your home lab. Think about that. If you're an IT in any capacity,
+you need to run eight N. They have connections to every
+service you use, and if they don't, you can make your own and
+I'm not sure you heard me. You can automate everything, your email
+inbox, social media, post your toilet, it can do anything. Honestly, the hardest
+part is figuring out what to do first. Let me help you with that. In this video, I'm going to walk you through every step
+of setting up N eight N in your lab, teaching you the basics of N eight N and
+walking you through a few of your very first automation projects, which I think you're going to
+love to get you coffee ready? Let's automate now real quick, have
+you hacked the YouTube algorithm? Let's make sure you do. If
+that like button subscribe, comment notification bell. You got to
+hack YouTube today ethically, of course. Now I'm going to show you
+two ways you can install NAN. I encourage you to take a glance at both
+paths so you can kind of get a feel for what's best for you. The first way is
+on-prem and your home lab and your house. This option will be a bit more complex,
+but that just makes it more fun. The good news is that NAN is
+light. You'll need some Linux, so think a server or a desktop
+computer, but it doesn't have to be big. It can be as small as a raspberry
+pie. In fact, it can be much smaller. What's funny is their
+official documentations like,
+eh, you don't need much. It's not CPU intensive and no
+matter what hardware you choose, we will be installing this
+with Docker, which is amazing. If you don't know what that is, that's
+fine. I'm going to walk you through it. The second option is my favorite and
+recommended path, the cloud for this. You've got options. I'm going to walk you
+through setting it up on hosting your, they're the sponsor of this video and
+where I host a lot of my home lab now. Now, the reason I like this option is because
+N eight N connects to a ton of things and it has a ton of things. Connect to it. The cloud option is less complex and
+you'll be up and running in a few sips of coffee. One more to go. The first thing
+you'll do is set up your cloud account. We're going to do it on hosting your
+head out to hosting your.com/n CNAN. Now, real quick, check this out. If
+I go to services and go to VPS, which is a virtual private
+server, it's what we're doing. You can jump right into
+N-A-N-V-P-S hosting. It's
+like they knew we were coming. Click on that. Choose your plan.
+KVM two is perfect with all of this. You can have an entire home lab, not
+just NAN, run a website, run open web ey. A lot of the projects I talk about on
+this channel can be run with this one virtual machine in the cloud and don't
+forget to put in coupon code network, Chuck. Some magic stuff will happen. Now,
+if you chose that special NAN option, you're pretty much done. If however, you already had a hosting or server
+maybe running Ubuntu or something or any other type of VPS, continue on
+to the on-prem installation. It's going to be pretty much the same.
+Hey, network shut from the future. Here I decided to pop out the section
+for the on-prem install into its own video, which you can see right here. Why? Because I did not want you to
+wait to see how powerful a n is, which I'm about to show you right now. Once it finishes setting up and
+you're at the server console, just click on manage app and it takes
+you right to the NAN signup page for your own hosted NAN. Anyways, let's
+get logged in or signed up. I don't want to receive any updates. Next, we don't have to fill any of that out
+and you actually do want this free activation key, so go ahead and have
+it, send that to you, check your email. I just received my key, so I'll go to the usage and plan area
+to enter my activation key. Again, this is all free and done, so
+now here we are at the overview. NAN is installed. Now what? Let's set up your first automation
+and what NAN calls an automation is a workflow. We'll start right up
+here. Click on Create Workflow. Now you're about to have a whole
+world open up to you. This is so fun. Now for me, I always feel like I'm behind. It's so hard for me to keep up
+with all the tech news coming out, checking bleeping, computer
+hacker, news, subreddits, YouTube. It's all so much. I need a
+better solution. We're going
+to make that right now. Now we're going to start small, something very simple and then we're
+going to slowly get more insane. It's like a skinny dude just getting
+into the gym. We're starting slim. By the end, we're going to be yoked
+and insane. Alright, NAN basics. Here we stink and go click on the
+square to add our first step. Boom, what's happening here? We're
+adding our first trigger. What's going to make our workflows flow? Do its thing 99% of the time you're going
+to start with trigger manually right here. Your workflows can always have
+this trigger along with other triggers. We'll cover that here in a
+second. Actually, you know what? Let's add another trigger right now. So at the top right you'll
+see we have our plus icon. Let's add another one plus, and then
+down here we have add another trigger. This time we'll do on a schedule
+and we'll say every one day at Yeah, midnight's actually. Great,
+done. So now we have two triggers, both ready to do some things. Let's click on that first plus
+icon to add our next node. Now here you have a billion
+options. We have a fun AI section, which we'll cover a little
+bit here in a moment. You can do something in an app and they
+have a bajillion connections to whatever service you can think of. Just know we have a bunch of
+nodes and they help us do things. The first thing I want
+to do is search for RSS. We're going to do an RSS read trigger
+and notice it immediately threw us into the node. We can click out of it
+just by clicking some blank space. It's sitting right here. It's got a little angry thing
+because we haven't configured it yet, but notice how it connects. We can also take our schedule trigger
+and connect it here too. Boom, just like that. Or we can delete it. Boom, and we're going to
+start with one RSS feed. That's going to be from bleeping computer.
+Put it in there, get out of there. Let's save our config. You want to save
+often, like everything in it. Top right, click on save. We're saved and now let's
+test our RSS Read. Let's jump in there. Just double click your icon, your node and click on execute
+step right here at the top go. Did you see all that? It just
+went out and pulled all the stuff, all the articles from Bleeping computer
+and those are field of the creator. The title Unified CM has a hard
+coded root SSH grill. That's bad. Anyways, we have a whole bunch of fields even
+has the entire content and notice a few things. Here we actually
+have our number of items. It pulled 13 articles from the
+feed. We don't control that. That's just how many were available in
+the R ss feed and also notice over here we can change how we view this data. Now you're about to become an
+expert in JSON because NAN is very js O heavy. We can view it in
+JSO or JSON or we can view the schema, all the available fields. If we click out, notice that we have on our
+little timeline connector here. The trigger was like one item,
+which is just go the RSS read. When it read the RSS feed. It pulled in 13 items and that's what
+it's going to hand off to the next step. Alright, cool. We pulled in 13
+articles from Bleeding Computer. Let's send it somewhere.
+Let's say Discord, so I'm going to add another node right
+here. Boom. I'll search for Discord. They do have a built-in Discord
+node and look at all these options. You can do so many things for
+me. I'm going to send a message. Yes, that's what I'm doing. Now, immediately we're thrust into
+this and we have a lot of options. The first is our connection type. Now keep in mind every node's going
+to have their own configuration. Now, for our connection type, I want to do a simple web hook because
+all I want to do is send a message to one particular channel, but in order
+to do that, I'll need a credential, something to connect to this service.
+Now, you'll see this a lot with N eight N. You can connect all kinds of
+things like your Gmail account, your Gmail calendar notion, open
+ai, gr andro, a lot of connections, a lot of credentials. Let's go
+and add one right now for Discord. Now for this particular use case, it
+will only be a webhook URL. Very simple. Feel free to follow along. It's
+free to set up a Discord server. I just did it just now as we're talking,
+I'm going to create a new channel, suite, suite news, creating it, and then I'll go into my server settings, go to integrations and
+create a quick web hook, which we'll post to Sweet Sweet News.
+I'll copy that. URL, paste it here, click save, and we have our first credential created
+and notice how we have a dropdown because we can have multiple discord
+credentials, but we just have the one. Now we're going to send a message
+and we're going to say something. Now first I'm just going to test it. I'm
+going to say hi and execute. Excellent. We got a success true. Now, is
+that true? Let's go check. Oh gosh, it just said hi a
+million times in general. I hadn't saved it for the other
+thing yet. Now, real quick, why do you think it said hi 13 times?
+Watch, I'll do it again. By the way, isn't this like playing
+with the video game? Why do people even play the video games
+when you can do stuff like this in your home lab? Are you kidding me? Let's say I bet you there will be 13 of these. Go done. Look back in
+Discord, we have 13 messages. Why? That's how NAN handles things. Notice that we're handing
+off 13 articles or items from our RSS read node. The discord node is going to go through
+each one of those 13 items and perform 13 individual actions. Now, the reason I only said like hi or that
+dumb sentence I had is because I didn't put anything specific to
+those articles in the message. Let's change that right now.
+So let's start with, hey, here is your news for the day and
+here's where things get very fun. Let's hit enter a few times, give us some space and let's start
+adding some of the content from these articles. Let's add the creator. I'm
+just going to grab this right here. See this? Notice how
+my mouse highlights it. I'm going to drag it over
+right there. Look at that. Notice it's going to be JSON Creator. It's pulling from this JSON information
+and this notation right here is actually JavaScript. Don't get scared. You won't have to know JavaScript
+to move forward with N eight N. You're going to get better at JavaScript
+because it does rely on that quite a bit, but we've got Chacha, BT, and Claude to help us figure out
+some other things. But for now, you won't have to know that.
+Just notice what I did there. I dragged and it created that. So
+put the creator, let's put the title, we'll put the link and the
+published date. How about that? I notice how below us we're
+seeing the result, the example, what those variables are forming into.
+Now let's test that out, execute step. Let's go see what happened.
+Look at that actual news. Notice that sent out 13 messages,
+but also notice it's said, Hey, here's your news for the day. 13 times
+that one for each article. Now ideal, we'll definitely fix that, but so
+far we've done something pretty cool. I'm going to click save one more time. We set up a node to pull information
+from an RSS feed and then we're sending that information to a Discord
+channel, but honestly, 13 is too much. I don't want to see 13 things.
+Let's limit that information. Let's write here between the
+discord node and the RSS read node. I'm going to add something called limit
+which will restrict the number of items. I'm going to say I only
+want to see five things. Now I could execute it from here.
+I don't have to. I can jump out. Hit the play button right here. Boom.
+And now we're only sending five items. Now do you want to see something really
+cool? This has nothing to do with news, but I can't, can't wait to show,
+oh, I almost want the coffee. That's how excited I am. I can't wait to show you this now we
+don't have to click on anything to add a new node. We can just go up here to the plus sign
+or even just hit tab and open up the node selector. I'm going
+to search for command line. We can execute commands on the host,
+so I'm going to click out of it. Look at that. That's pretty
+sick. I'm going to have this. Click the execute button, make
+that go off too. Now look at that. I can actually make both of
+these Go off another branch. Now let's have it do something. So let's jump into our node and this will
+be a command that we're actually doing executing on our docker host. I'm
+going to say ping 1.1, 0.1 0.1, and we'll do that for account. So
+dash C of three. Let's try it out. Look at that. We are able to run
+commands. Now, I don't know about you, but when I see that I'm like, oh
+my gosh, I'm starting to get this. I have a billion ideas. Now, let's say that we're doing a test for our
+internet and we know that when we ping 1.1 0.1 and we give responses back, we know it's working and maybe we want
+to have that sent to us in our discord message. Let's do that right now. So I'm actually going to delete this
+connection between discord and the limit node. I'm teaching you a little bit
+about how we manipulate data inside NAN. I'm going to add a new node
+right here called the merge node. We can merge sets of data. Notice how it has two inputs
+limits going into one. Let's add our command output
+into the other. For merge, we have a few options or more than a few.
+We have a lot, but a pending is great, so it's going to append
+one input to another. I'll show you what that
+looks like here in a second, but notice something kind of weird. Notice how our command output
+shows one item going out, but our RSS feed or read and
+our limit is outputting nothing. It kind of reset, didn't it? So now we have to go back in there
+and run them again to pull fresh data. So I'll jump into RSS, read, execute the step again and notice
+how our command output is now gone. It kind of resets as you're
+going through. That's annoying, especially as you get to later steps. There's a way to get beyond
+that when you're testing. I can jump into this RSS read notice that
+we have our results here on the right and I have a little thumbtack. I can
+pin that data, say keep that data there. Don't ever remove it.
+Same thing goes for limit. When I execute limit I can say boom pin
+that there. So no matter what happens, that stays there. I'll do the
+same thing for command pin, that sucker unless we have a pin on
+each of the nodes when we do that, and then we'll execute our merge
+and I'll show you what it does here. So it actually just did our five articles
+we're pushing over and then at the end we have a bunch of weird fields, but at the end it added
+in our ping results, which is standard out
+a new column that has, I notice we're outputting six items. Now let's connect that back to Discord
+and let's jump into the discord node and mess with a few things. Actually, I'm just going to add one
+more new piece of data. We're going to add our standard out here. So notice the ping results are down
+here with standard out or St. Doubt, no doubt. Now let's run it. True, true,
+true, true, true, true. A lot of stuff. We check discord, there's all our articles
+and at the end is our ping result. Now sidebar, beyond just doing the command
+execute command on the Docker host, we can also add an SSH node that
+will log into any computer or server with SSH, access and execute
+any command you want, network, switch router, anything. I
+know your gears are turning. Stop it. You can't do that right
+now. You're going to get distracted. We got to learn the basics before you
+move on. Sorry, that was my fault. Now, one of the killer things that I have not
+shown you yet with NAN is the power of ai. Now, already a n is cool because you can do
+all of this and we haven't even touched ai. Let's add AI to it. Let's say
+we've got all these articles coming in, these five items from bleeping
+computer, but who has time to read that? Let's have AI summarize that for us. So right here between the limit and
+the merge, I'm going to add a new node. I'll choose ai and we
+have a bunch of options. The most common one is right
+here, the basic LLM chain. We'll select that and we'll jump out of
+it real quick so you can see it nice and clean here. Let's make some room for
+our new family member. Our new friend. Notice our LLM chain. He's a bigger node and he has this
+weird thing jutting out of him. And this is for our AI model. We can choose whatever AI model we want
+to connect to this and be the brains. Let's do that right now. Look on plus
+and we have some options. Anthropic, Azure, deep seek, open ai,
+or even llama a local model. So here I'll select Llama, why
+not? We will need a credential. I'll create one right now and it's
+just going to be connecting to a host. Now my local host is not
+running my Alama server. It's going to be Terry here in my data
+center. They might be wondering, Chuck, how are you doing this? You're
+right now connected to hosting her, but you're somehow accessing your
+stuff and that magic is with Twin Gate. They're not sponsoring this video, but I use them all the
+time for stuff like this. It's insanely secure and awesome.
+If you want to learn more, I've got a video about it here. So
+anyways, let's see if this works. Click on save, it's going to test the
+connection. Okay, I think it worked. And then now I can select all of my
+local models. I'll run LAMA 3.2. Why not? So now with the LLM chain,
+I've got my model connected. Now let's have it do something. So
+I'll double click the LLM chain node. So it's hoping you have a
+chat trigger connected to it. Instead of that we're going to define our
+own a message, a prompt, and I'll say, Hey, your job is to summarize
+this article in two sentences, go and then
+I'll add in the content. Now the content is very much abbreviated
+and how is Lama going to summarize what's not there? So let's try this. I'm going to change my RSS feed
+from bleeping computer to Krebs, another security based
+blog, Krebs on security, and I believe when I do that
+I should get the entire blog and the content. Yeah, it's like
+every bit of it. That's awesome. I'm going to pin that. Jump into my
+limit. Execute again. Unin and test. There it is. I'll pin that now.
+So now when I jump into my LLM, I'll add the content ENC coded
+and that should be everything. Let's take a look by expanding
+the box every bit of it. Now let's execute the step and
+see how Llama handles this. Now I'm worried because that is
+a lot of content. As I step out, you can see it's working, which this is
+so cool. Look at this. And there you go. Three, four or five items, it
+finished up. Let's check it out. The output now is okay, it didn't quite summarize each article
+in two sentences because we're dealing with the local model and the context
+window of a local model is smaller. Oh, llama did. Okay, but if we traded
+out for more of a frontier model, let's do a Chad j bt, I'll create
+a new credential for open ai. I'll use four one mini, that's
+fine. Let's see how that does. Not too bad at all. That's
+awesome. Check this out. Let's add a LLM chain between our
+execute command and the merge. Let's do ai. We'll do a standard LM chain and
+let's do something like this. Tell me if the internet is up, if you see successful pings
+from the output below, that means it's good.
+Tell me in a funny way, impersonating Eddie Murphy. Let's grab
+the standard out and put it right there. We'll give it open ai.
+I'll see how it does. That's stupid, but it's powerful. You get what I'm kind of
+trying to do here, but come on, I know what you're thinking.
+What else can you do with that? So let's expand this a bit
+more. I'm going to save this. This will be our part one project and
+I'll go up to the top left here and see where it says my workflow. We're going
+to click in there and just name this, my first one, and then we're going
+to go up here to the top, right, click the buttons or the dots here and
+say duplicate. I'll say my second one and duplicate. Now we
+have another workflow. If I go back to personal on the side
+here, I can see I have my two workflows. I can go to credentials. So I have all
+my credentials here that I've created. I executions. Every time
+we've run something, you can jump in and analyze
+exactly what happened. Isn't that amazing? This
+thing's too powerful. Let's
+get back to our second one. Let's add some more fun stuff. So what I want to do actually
+is finish up this project. Let's combine all the information that
+we now have from our AI powered stuff. And I should have pinned that
+information, pinned that, and this is where pinning information
+is great because you don't want to waste tokens on ai. Speaking of tokens, look
+at this, I'm going to run it again. We got to log here. What's going on? It shows you in real time the tokens
+being used on the bottom left here. Isn't that cool? Alright, now we're
+really going to pin that information. Now, before we get to merge, I want to mess with our data over here
+for a second because right now if we look at our LLM chain, right? It's
+outputting just the summary. That's all it's handing out. And these
+five items, that's all we're seeing, but I also want to include
+information from our limit, like the creator and
+the title and the link. So we can do something pretty cool
+with a node called the set field node. I'm going to add it right here, search
+for it set or edit fields there, it's so sitting right here, what we can do is just take
+certain things we want to include. So I'm going to go back to previous
+steps. I'll go to the limit step. So give me the creator, give me the title, just dragging stuff over. Give
+me the link publication date, and then I'll add in the summary that
+Chad GT made. So if execute that, bam, it created those
+fields, just the ones I want. And then we'll send them to our discord. And actually what I'm going to do now is
+remove the merge because it gets messy having six items from over here
+and only one item from over here. I'll remove that and just duplicate
+my discord node just like this. So now set a field, puts
+out all the info, say, hey, here is what you need to know today. Then over here, here are his, how the internet is doing, straight it out, let's check our
+internet look. Oh, there we go. That's so cursed. And then let's execute
+our news articles. Let's check it out. Now we figure out our link.
+Got to have the link in there. Much better. Now we're going
+to start going faster here, but let's add some more news.
+Let's say YouTube videos. And did you know that every YouTube
+channel has their own RSS feed? So check this out. I'm going to
+add a new node for set fields. We're going to assess some information
+here and we're going to put this at the root of our flow here. And we're going to add a
+field called channel IDs. We're going to make this an array, which will be a list of items and it's
+going to be a list of YouTube channel IDs. We'll grab a few, let's go grab mine, which you can find a channel
+ID from going to more and going to share channel and
+copy channel id. But there, let's go find David Bumble and Tyler Ramsey, all great friends. This way you're not reliant on the
+stupid YouTube notification system. An our array will look like this.
+Want to execute this boom clean list. Now here's what I'm going to do.
+I'm going to add just after this, an RSS read to find an r RSS S
+feed for any YouTube channel, it's going to be like
+this, blah, blah, blah. Channel ID equals and we're just going
+to add in at the end of that the channel IDs. So notice it filled it in the
+variable over here. Oh wait, do you see what's happening? Oh no. It's taking it as one object and putting
+it all in there at the same time. I've got to fix for that. You're learning some serious
+data manipulation here in
+NAN. What we have to do, notice spitting out one
+item, one item right here. We need to have that spit out as
+many items as YouTube channel IDs. So we're going to add another note in
+between called split out, not Splunk. And yes, you can do Splunk stuff split
+out based on channel IDs. Execute boom, three items kicked out. Perfect,
+now it's working. Awesome. So if we execute the step
+for the RSS read one, we'll change that to YouTube channels. It's going to go grab some YouTube videos
+and their links and we got 45 videos to watch. We don't need that many.
+What do you say? We filter it. Let's filter by the ISO date. So this will be essentially when the
+video is published. Let's grab that, put it in there. Now notice it's like the time as well and
+we don't really need to filter off the time. All I care about is the day, so I'm going to use some fancy expression
+like this that'll just grab the year, month date. Now again, I'm no wizard
+with this. This is just chat GT. Hey, how do I do this really
+quickly? And I'll say, is the published date after or equal to? And we'll put in three days from
+now again with some AI magic. Cool. Notice how it's changing to July
+1st for that particular date, and then June 29th. Let's see how many
+videos are within the last three days? Eight. Cool, so we've filtered it
+down to eight. Our output looks okay, and then let's add another discord
+node and edit what data we want to see. Perfect. Let's try it out. Now we have videos being delivered
+to our inbox or to discord. Now we're going to have to stop here
+because this video could probably go on forever. I could sit here and do
+this with you for a long time. I'm going to save my stuff. I'm going to zoom out for a second and
+I just want to point out a few things. First, what we did here was not crazy
+complicated, but it is powerful. And what I wanted to hit home was
+the building blocks of n innate N. My goal was to get you going. Oh,
+I can do that with the AI agent. I can execute these commands.
+Oh, I could do this and that. I want you to be just brimming with
+ideas and I want to see those in the comments. Think about this food for thought because
+this is what I'm going to build based on this. Instead of just
+spitting out articles, maybe you have an AI rate the articles
+based on your personal preference and rank them and maybe the
+AI will tell you, Hey, you should definitely read this article.
+Or don't waste your time with this. Maybe it can go through YouTube
+videos, look at the comments, read the transcript, summarize when you really don't need to
+watch the entire video or have it tell you this video is a must. You
+have to watch the entire thing, like that kind of thing. Having this crazy automated news
+aggregator is totally possible with this tool. And that's just
+one idea. And by the way, I did kind of build this already. I
+wanted to show this to you in the video, in this video, but I just didn't
+have any time. But in the next video, because there is something
+I want to cover beyond this, I want to show you something
+I teased in the beginning. It's more around this workflow here, executing commands and having AI analyze
+your commands because NAN has one powerful thing I haven't
+shown you yet. It's with ai. I'm going to add one more AI
+thing here into the AI agent. I'm just going to put him out in the
+middle here. Let's zoom in on him. Notice he's like the LLM block, but
+he has a few more things going on. He's got memory and tools. What
+does that mean? Check this out. I'm going to add for the chat model,
+just open ai. Cool. Then for the tool, I'm going to add command line and
+the command will be ping network chuck.com For four
+pings, I'll describe it. This is how you check. If the website is up, add another tool. Let's do another command
+and say Ping 10.7, seven point 14 point 30 for three pings. This is how you see If Terry is up and now I want to add a trigger for
+this AI agent, it'll be a chat trigger. I'll connect it right here.
+Now I'm going to open the chat. Now I'm going to say, Hey,
+is the internet up it? Its it's using chat GBT. It's that
+they're going to use one of our tools. It's using both for some reason.
+Look at that. So that's pretty cool. I can say things like, Hey, is Terry
+up? It's only going to one thing. Terry, are you seeing this?
+This is a simple example. We can connect this whole thing to our
+whole home lab. That's the next video. That's all I got. I'll
+catch you guys next time.

@@ -1,0 +1,95 @@
+@import 'tailwindcss';
+
+/* B2 — 2026-05-18 Adminsax retarget. Design tokens for the new dark
+ * aesthetic: page sits on a very dark cool bg; cards float on a
+ * slightly lighter surface with no visible border. Mono font is no
+ * longer global — kept only for code/PTY/log surfaces that opt in
+ * with `font-mono`.
+ */
+:root {
+  /* New surface tokens (Adminsax dark) */
+  --bg:            #0a0a0e;
+  --surface-1:     #16161c;  /* cards / sidebar */
+  --surface-2:     #1f1f26;  /* inputs, insets, mood ribbon */
+  --border-soft:   rgba(255, 255, 255, 0.05);
+  --text:          #ededf2;
+  --text-muted:    #a1a1aa;
+  --text-subtle:   #71717a;
+  --text-faint:    #52525b;
+
+  /* Legacy Apple system colors — kept as alt accent palette. */
+  --apple-blue:    #0a84ff;
+  --apple-green:   #30d158;
+  --apple-orange:  #ff9f0a;
+  --apple-red:     #ff453a;
+  --apple-yellow:  #ffd60a;
+  --apple-purple:  #bf5af2;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter var", "Inter", -apple-system, BlinkMacSystemFont,
+               "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Subtle focus ring on inputs/buttons — kept blue because it's a
+ * standard affordance the eye reads as "you're here." */
+*:focus-visible {
+  outline: 2px solid var(--apple-blue);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Scrollbar — slim, very translucent. */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.15); }
+
+/* Translucent material — backdrop-filter mixin for modals/popovers. */
+.apple-material {
+  background: rgba(22, 22, 28, 0.78);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+/* Card shadow — soft, close to the surface, no harsh halo. */
+.apple-card-shadow {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3),
+              0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Status-dot glow — used for "live presence" indicators in the
+ * Sidebar (LM Studio), Dashboard (WS connected), and MoodRibbon. */
+@keyframes pulse-glow {
+  0%   { box-shadow: 0 0 0 0   rgba(255, 255, 255, 0.35); transform: scale(1); }
+  60%  { box-shadow: 0 0 0 6px rgba(255, 255, 255, 0);    transform: scale(1.06); }
+  100% { box-shadow: 0 0 0 0   rgba(255, 255, 255, 0);    transform: scale(1); }
+}
+.pulse-glow {
+  animation: pulse-glow 2.2s ease-out infinite;
+}
+
+/* a11y — kill global motion when the user asks for reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .pulse-glow { animation: none !important; }
+}

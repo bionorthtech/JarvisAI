@@ -1,0 +1,28 @@
+{
+  "name": "memory_recall",
+  "version": "1.0.0",
+  "description": "Explicitly search JARVIS long-term memory for files and past conversations",
+  "author": "JARVIS",
+  "tools": [
+    {
+      "name": "memory_recall",
+      "tier": "SAFE",
+      "description": "Search JARVIS persistent memory for previously seen files and past conversations related to a query. Use this when you need to recall what you worked on before.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "What to search for in memory"
+          },
+          "project": {
+            "type": "string",
+            "description": "Project namespace to search (default: 'default')",
+            "default": "default"
+          }
+        },
+        "required": ["query"]
+      }
+    }
+  ]
+}

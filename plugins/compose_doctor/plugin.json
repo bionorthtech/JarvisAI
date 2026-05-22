@@ -1,0 +1,24 @@
+{
+  "name": "compose_doctor",
+  "version": "1.0.0",
+  "description": "Lint docker-compose / Compose Spec files for production-hygiene issues — unpinned images, missing healthchecks, missing restart policy, missing resource caps, write-all bind mounts.",
+  "author": "JARVIS",
+  "requires_internet": false,
+  "tools": [
+    {
+      "name": "compose_lint",
+      "tier": "SAFE",
+      "description": "Lint a docker-compose file (or directory of them) for production-hygiene issues. Returns a findings list grouped by severity.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Path to a compose YAML file OR a directory to scan for docker-compose*.yml / compose*.yml. Defaults to current dir."
+          }
+        },
+        "required": []
+      }
+    }
+  ]
+}

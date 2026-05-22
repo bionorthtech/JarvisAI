@@ -1,0 +1,44 @@
+{
+  "name": "app_launcher",
+  "version": "1.0.0",
+  "description": "Launch desktop apps, open files with default apps, and control running app windows via AT-SPI2",
+  "author": "JARVIS",
+  "requires_internet": false,
+  "tools": [
+    {
+      "name": "app_launch",
+      "tier": "CAUTION",
+      "description": "Launch a desktop application by name (e.g. 'kiwix-desktop', 'freecad', 'obsidian', 'code').",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "app": {"type": "string", "description": "Application name or command"},
+          "args": {"type": "string", "description": "Optional command-line arguments", "default": ""}
+        },
+        "required": ["app"]
+      }
+    },
+    {
+      "name": "app_open_file",
+      "tier": "CAUTION",
+      "description": "Open a file with its default application (like double-clicking in Files).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {"type": "string", "description": "Path to the file to open"}
+        },
+        "required": ["path"]
+      }
+    },
+    {
+      "name": "app_list_windows",
+      "tier": "SAFE",
+      "description": "List all open application windows visible to AT-SPI2.",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  ]
+}

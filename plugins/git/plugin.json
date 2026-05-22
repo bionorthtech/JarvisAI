@@ -1,0 +1,87 @@
+{
+  "name": "git",
+  "version": "1.0.0",
+  "description": "Git repository operations — status, diff, log, commit, branch management",
+  "author": "JARVIS",
+  "requires_internet": false,
+  "tools": [
+    {
+      "name": "git_status",
+      "tier": "SAFE",
+      "description": "Get the git status of a repository path.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {"type": "string", "description": "Repository path (default: current dir)", "default": "."}
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "git_diff",
+      "tier": "SAFE",
+      "description": "Show uncommitted changes. Use staged=true to see staged changes.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {"type": "string", "default": "."},
+          "staged": {"type": "boolean", "description": "Show staged changes instead of unstaged", "default": false},
+          "file": {"type": "string", "description": "Optional: diff a specific file only", "default": ""}
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "git_log",
+      "tier": "SAFE",
+      "description": "Show recent commit history.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {"type": "string", "default": "."},
+          "count": {"type": "integer", "description": "Number of commits to show", "default": 15}
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "git_branch",
+      "tier": "SAFE",
+      "description": "List branches or show current branch.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {"type": "string", "default": "."}
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "git_commit",
+      "tier": "CAUTION",
+      "description": "Stage all changes (git add -A) and commit with the given message. Always shows what will be committed first.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {"type": "string", "default": "."},
+          "message": {"type": "string", "description": "Commit message"}
+        },
+        "required": ["message"]
+      }
+    },
+    {
+      "name": "git_checkout",
+      "tier": "CAUTION",
+      "description": "Switch to or create a branch.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {"type": "string", "default": "."},
+          "branch": {"type": "string", "description": "Branch name to switch to"},
+          "create": {"type": "boolean", "description": "Create the branch if it does not exist", "default": false}
+        },
+        "required": ["branch"]
+      }
+    }
+  ]
+}
