@@ -467,9 +467,6 @@ export default function App() {
 
 
 
-
-
-
 // TerminalPane moved to ./modes/terminal/index.tsx (B2).
 const TerminalPane = lazy(() => import("./modes/terminal"));
 
@@ -481,10 +478,6 @@ const CoderPane = lazy(() => import("./modes/coder"));
 // ─── Shared components ────────────────────────────────────────────────────────
 
 // PaneHeader moved to ./components/PaneHeader.tsx (B2). Imported per-mode.
-
-
-
-
 
 
 
