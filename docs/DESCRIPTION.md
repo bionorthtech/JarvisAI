@@ -23,7 +23,7 @@
 
 | File | Caption |
 |---|---|
-| `Screenshot_2026-05-21_20-42-36.png` | **Coder** — File-tree browser with the App Launcher plugin open. Ctrl+1–9 shortcuts launch any installed app directly from JARVIS. |
+| `Screenshot_2026-05-21_20-42-18.png` | **Chat** — Main conversational interface showing JARVIS online, the full sidebar, streaming input bar, and the Notifier surfacing JARVIS's internal monologue. |
 | `Screenshot_2026-05-21_20-43-01.png` | **Brain** — Overview tab showing the capture widget, today's daily note, Ask the Brain RAG search, and vault stats (1,397 notes, 265 edges). |
 | `Screenshot_2026-05-21_20-43-43.png` | **Dashboard / Mission Control** — Live health ring (81 — Watchful), JARVIS Health bars, 24h report, and system status tiles streaming from the event bus. |
 | `Screenshot_2026-05-21_20-43-57.png` | **Dashboard / Internal State** — Emotion dimensions, drive levels (Learning at 48%), JARVIS Wants panel, and the live Thought Stream. |

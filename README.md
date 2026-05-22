@@ -8,10 +8,10 @@ JARVIS runs entirely on your machine. It combines a **FastAPI backend** with a *
 
 ## What it looks like
 
-### Coder — Browse files and launch apps
-![Coder mode showing file tree and app launcher](docs/Screenshot_2026-05-21_20-42-36.png)
+### Chat — Main conversational interface
+![Chat pane showing JARVIS online with input bar](docs/Screenshot_2026-05-21_20-42-18.png)
 
-The Coder pane gives you a full file-tree browser with syntax-highlighted editing and fill-in-the-middle code completion. The App Launcher plugin (shown above) lets JARVIS open system apps and files directly from chat — Ctrl+1 through Ctrl+9 for instant access to your most-used tools.
+The Chat pane is the primary way you talk to JARVIS. Responses stream in real time via SSE with live tool-call cards showing exactly what JARVIS is doing at each step. The top bar shows the active model and current project context — switching projects gives JARVIS a separate memory space. The Notifier in the bottom-right corner surfaces JARVIS's internal monologue even when you're not actively chatting. DANGER and CRITICAL tool calls pause execution and show a confirmation modal with an impact preview before anything runs.
 
 ---
 
