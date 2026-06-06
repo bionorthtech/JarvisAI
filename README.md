@@ -2,7 +2,7 @@
 
 > A fully local, privacy-first AI assistant and coding agent — powered by LM Studio 
 
-JARVIS runs entirely on your machine. It uses LM studio to run the ai models then connects to the jarvis app give you a persistent coding assistant, an Obsidian-compatible second brain, a homelab warden, and a four-level autonomy system that can pursue its own goals while you sleep. No API keys. No telemetry. No data leaves your hardware.
+JARVIS runs entirely on your machine. It uses LM studio to run the ai models then connects to the jarvis app give you a persistent coding assistant, an Obsidian-compatible second brain, a homelab warden, and a four-level autonomy system that can pursue its own goals while you sleep. No API keys. No telemetry. No data leaves your hardware. Tested on linux systems so far windows/mac not planned right now
 
 ---
 
